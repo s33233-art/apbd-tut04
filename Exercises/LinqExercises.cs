@@ -108,7 +108,11 @@ public sealed class LinqExercises
     /// </summary>
     public IEnumerable<string> Task06_DoAllLecturersHaveDepartment()
     {
-        throw NotImplemented(nameof(Task06_DoAllLecturersHaveDepartment));
+        int deptCount = UniversityData.Lecturers
+                        .Count(l => l.Department != null);
+        int lectCount = UniversityData.Lecturers
+                        .Count();
+        return (lectCount == deptCount) ? ["True"] : ["False"];
     }
 
     /// <summary>
@@ -122,7 +126,10 @@ public sealed class LinqExercises
     /// </summary>
     public IEnumerable<string> Task07_CountActiveEnrollments()
     {
-        throw NotImplemented(nameof(Task07_CountActiveEnrollments));
+        int count = UniversityData.Enrollments
+            .Count(e => e.IsActive);
+        return [$"{count}"];
+        ;
     }
 
     /// <summary>
@@ -136,7 +143,10 @@ public sealed class LinqExercises
     /// </summary>
     public IEnumerable<string> Task08_DistinctStudentCities()
     {
-        throw NotImplemented(nameof(Task08_DistinctStudentCities));
+        return UniversityData.Students
+            .OrderBy(s => s.City)
+            .Select(s => $"{s.City}")
+            .Distinct();
     }
 
     /// <summary>
@@ -151,7 +161,10 @@ public sealed class LinqExercises
     /// </summary>
     public IEnumerable<string> Task09_ThreeNewestEnrollments()
     {
-        throw NotImplemented(nameof(Task09_ThreeNewestEnrollments));
+        return UniversityData.Enrollments
+            .OrderByDescending(s => s.EnrollmentDate)
+            .Select(e => $"{e.EnrollmentDate}, {e.StudentId}, {e.CourseId}")
+            .Take(3);
     }
 
     /// <summary>
