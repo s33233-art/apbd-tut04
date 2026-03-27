@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LinqConsoleLab.EN")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed5ac0b681d9fb81e39cb4c4aa74c21cb80f902a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c9900ed32045e9b2fadb5c266d5fedf571ee679")]
 [assembly: System.Reflection.AssemblyProductAttribute("LinqConsoleLab.EN")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LinqConsoleLab.EN")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
